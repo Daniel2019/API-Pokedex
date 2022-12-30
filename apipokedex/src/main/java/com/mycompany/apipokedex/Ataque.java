@@ -11,6 +11,7 @@ public class Ataque {
     private String nome;
     private String tipo;
     private String efeito;
+    private String categoria;
     private int dano;
     private int pp;
     private int precisao;
@@ -55,6 +56,14 @@ public class Ataque {
         this.efeito = efeito;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
     public int getDano() {
         return dano;
     }
@@ -77,6 +86,11 @@ public class Ataque {
 
     public void setPrecisao(int precisao) {
         this.precisao = precisao;
+    }
+
+    @Override
+    public String toString() {
+        return "Ataque{" + "id=" + id + ", tm=" + tm + ", nome=" + nome + ", tipo=" + tipo + ", efeito=" + efeito + ", categoria=" + categoria + ", dano=" + dano + ", pp=" + pp + ", precisao=" + precisao + '}';
     }
     
 }

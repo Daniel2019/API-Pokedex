@@ -2,6 +2,7 @@ package com.mycompany.apipokedex;
 
 import java.sql.Connection;
 import java.util.List;
+import model.AtaqueDAO;
 import model.Conexao;
 import model.HabilidadeDAO;
 
@@ -28,13 +29,22 @@ public class Apipokedex {
 //        sandVeil.setDescricao("Aumenta a evasão do Pokémon em uma tempestade de areia.");
 //        
 //        Ataque tm001= new Ataque();
+//        tm001.setId(1);
 //        tm001.setTm(1);
 //        tm001.setNome("Mega Punch");
 //        tm001.setTipo("Normal");
-//        tm001.setEfeito("Mega Punch causa dano sem efeito adicional.");
+//        tm001.setEfeito("Mega Punch causa dano sem efeito adicional");
+//        tm001.setCategoria("Physical");
 //        tm001.setDano(80);
 //        tm001.setPp(20);
 //        tm001.setPrecisao(85);
+        
+        AtaqueDAO dao = new AtaqueDAO();
+        
+        for(Ataque ataque: dao.buscarAtaque(0, "q")){
+            System.out.println(ataque.toString());
+        }
+//        dao.adicionarAtaque(tm001);
 //        
 //        Status status001 = new Status();
 //        status001.setHp(45);

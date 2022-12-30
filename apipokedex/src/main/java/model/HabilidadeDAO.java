@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import com.mycompany.apipokedex.Habilidade;
@@ -126,10 +122,10 @@ public class HabilidadeDAO {
         }
     }
     
-    public void excluirHabilidade(Habilidade habilidade){
+    public void deletarHabilidade(int id){
         try{
             Connection con = new Conexao().conectar();
-            PreparedStatement prepared = con.prepareStatement("DELETE FROM habilidade WHERE id = "+habilidade.getId());
+            PreparedStatement prepared = con.prepareStatement("DELETE FROM habilidade WHERE id = "+id);
             prepared.execute();
             System.out.println("Habilidade Deletada!");
             con.close();
