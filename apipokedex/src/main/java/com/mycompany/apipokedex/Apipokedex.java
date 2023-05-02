@@ -41,7 +41,7 @@ public class Apipokedex {
         
         AtaqueDAO dao = new AtaqueDAO();
         
-        for(Ataque ataque: dao.buscarAtaque(0, "q")){
+        for(Ataque ataque: dao.retornarAtaques()){
             System.out.println(ataque.toString());
         }
 //        dao.adicionarAtaque(tm001);
